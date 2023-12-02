@@ -57,6 +57,19 @@ func compute(w http.ResponseWriter, r *http.Request) {
     text := r.FormValue("text")
     computationType := r.FormValue("computation")
 
-    var resul
+    var result string
+    switch computationType {
+    case "lines":
+        lineCount := CountLines(text)
+        result = fmt.Sprintf("Number of lines: %d", lineCount)
+    case "characters":
+        charCount := CountCharacters(text)
+        result = fmt.Sprintf("Number of characters: %d", charCount)
+    default:
+        result = "Invalid computation type"
+    }
+
+    fmt.Fprintf(w, result)
+}
 
 
