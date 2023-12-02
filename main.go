@@ -4,7 +4,6 @@ import (
     "fmt"
     "html/template"
     "net/http"
-    "strings"
 )
 
 func main() {
@@ -58,19 +57,6 @@ func compute(w http.ResponseWriter, r *http.Request) {
     text := r.FormValue("text")
     computationType := r.FormValue("computation")
 
-    var result string
-    switch computationType {
-    case "lines":
-        lineCount := len(strings.Split(text, "\n"))
-        result = fmt.Sprintf("Number of lines: %d", lineCount)
-    case "characters":
-        charCount := len(text)
-        result = fmt.Sprintf("Number of characters: %d", charCount)
-    default:
-        result = "Invalid computation type"
-    }
-
-    fmt.Fprintf(w, result)
-}
+    var resul
 
 

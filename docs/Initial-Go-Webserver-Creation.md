@@ -21,6 +21,8 @@ Prompts:
 > 
 > Update main.go with a drop-down that allows selection between multiple computations. One option is "Number of Lines" (the current behavior), but another option is "Number of Characters"
 >
+> Break out the "number of lines" and "number of characters" into separate go files
+> 
 
 Result:
 
