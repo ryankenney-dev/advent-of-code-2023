@@ -17,6 +17,43 @@ func homePage(w http.ResponseWriter, r *http.Request) {
     tmpl := template.Must(template.New("form").Parse(`
         <html>
             <head>
+                <style>
+                    body {
+                        background-color: #121212;
+                        color: #ffffff;
+                        font-family: 'Arial', sans-serif;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 100vh;
+                        margin: 0;
+                    }
+
+                    #container {
+                        text-align: center;
+                        width: 75%;
+                    }
+
+                    textarea, select, button {
+                        margin-bottom: 10px;
+                        background-color: #333333;
+                        color: white;
+                        border: none;
+                        padding: 10px;
+                        border-radius: 4px;
+                    }
+
+                    textarea {
+                        width: 100%;
+                        box-sizing: border-box; /* Ensures padding doesn't add to the width */
+                    }
+
+                    #result {
+                        margin-top: 20px;
+                        border: 1px solid #ffffff;
+                        padding: 10px;
+                    }
+                </style>
                 <script>
                     function sendRequest() {
                         var xhr = new XMLHttpRequest();
@@ -34,14 +71,16 @@ func homePage(w http.ResponseWriter, r *http.Request) {
                 </script>
             </head>
             <body>
-                <textarea id="text" rows="10" cols="30"></textarea><br>
-                <select id="computation">
-                    {{range $key, $value := .}}
-                        <option value="{{$key}}">{{$value.Title}}</option>
-                    {{end}}
-                </select>
-                <button onclick="sendRequest()">Submit</button>
-                <div id="result"></div>
+                <div id="container">
+                    <textarea id="text" rows="10"></textarea><br>
+                    <select id="computation">
+                        {{range $key, $value := .}}
+                            <option value="{{$key}}">{{$value.Title}}</option>
+                        {{end}}
+                    </select>
+                    <button onclick="sendRequest()">Submit</button>
+                    <div id="result"></div>
+                </div>
             </body>
         </html>
     `))
