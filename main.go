@@ -36,15 +36,23 @@ func homePage(w http.ResponseWriter, r *http.Request) {
             <body>
                 <textarea id="text" rows="10" cols="30"></textarea><br>
                 <select id="computation">
-                    <option value="lines">Number of Lines</option>
-                    <option value="characters">Number of Characters</option>
+                    {{range $key, $value := .}}
+                        <option value="{{$key}}">{{$value.Title}}</option>
+                    {{end}}
                 </select>
                 <button onclick="sendRequest()">Submit</button>
                 <div id="result"></div>
             </body>
         </html>
     `))
-    tmpl.Execute(w, nil)
+
+    // Create a data structure for template
+    data := make(map[string]struct{ Title string })
+    for key, alg := range algorithms {
+        data[key] = struct{ Title string }{Title: alg.Title()}
+    }
+
+    tmpl.Execute(w, data)
 }
 
 var algorithms = map[string]Algorithm{
