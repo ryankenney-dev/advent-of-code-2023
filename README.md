@@ -3,7 +3,7 @@
 This was all done in a programming language (Go Lang) that I would still say I have never used.
 
 * [Initial Go Webserver Creation](docs/Initial-Go-Webserver-Creation.md)
-  (~10 minutes with ChatGPT 4)
+  (~15 minutes with ChatGPT 4)
 * [Refactored for Ease of Algorithm Addition](docs/Refactored-for-Ease-of-Algorithm-Addition.md)
   (~10 minutes with ChatGPT 4 and debugging copy/paste issues)
 * [Added Day 1 Part 1](docs/Added-Day-1-Part-1.md) (~10 minutes with ChatGPT 4)
