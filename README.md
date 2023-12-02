@@ -7,6 +7,7 @@
 * [Added Day 1 Part 1](docs/Added-Day-1-Part-1.md)  (~10 minutes with ChatGPT 4)
 * [Added Day 1 Part 2](docs/Added-Day-1-Part-2.md)  (~5 minutes with ChatGPT 4)
 * [Added Day 2 Part 1](docs/Added-Day-2-Part-1.md)  (~5 minutes with ChatGPT 4)
+* [Added Day 2 Part 2](docs/Added-Day-2-Part-2.md)  (~5 minutes with ChatGPT 4)
 
 
 
