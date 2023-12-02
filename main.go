@@ -47,6 +47,11 @@ func homePage(w http.ResponseWriter, r *http.Request) {
     tmpl.Execute(w, nil)
 }
 
+var algorithms = map[string]Algorithm{
+    "lines":      LinesAlgorithm{},
+    "characters": CharactersAlgorithm{},
+}
+
 func compute(w http.ResponseWriter, r *http.Request) {
     if r.Method != "POST" {
         http.Redirect(w, r, "/", http.StatusSeeOther)
@@ -58,18 +63,12 @@ func compute(w http.ResponseWriter, r *http.Request) {
     computationType := r.FormValue("computation")
 
     var result string
-    switch computationType {
-    case "lines":
-        lineCount := CountLines(text)
-        result = fmt.Sprintf("Number of lines: %d", lineCount)
-    case "characters":
-        charCount := CountCharacters(text)
-        result = fmt.Sprintf("Number of characters: %d", charCount)
-    default:
+    if algorithm, ok := algorithms[computationType]; ok {
+        result = algorithm.Compute(text)
+    } else {
         result = "Invalid computation type"
     }
 
     fmt.Fprintf(w, result)
 }
-
 
