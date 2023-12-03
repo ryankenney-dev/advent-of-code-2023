@@ -7,11 +7,16 @@ import (
 
 type Day3Part1 struct{}
 
+type Day3Part2 struct{}
+
 func (d Day3Part1) Title() string {
     return "Sum of Part Numbers"
 }
 
-// Position represents a unique position in the grid
+func (d Day3Part2) Title() string {
+    return "Sum of Gear Ratios"
+}
+
 type Position struct {
     Row, Col int
 }
@@ -39,6 +44,54 @@ func (d Day3Part1) Compute(input string) string {
         }
     }
     return d.Title() + ": " + strconv.Itoa(sum)
+}
+
+func (d Day3Part2) Compute(input string) string {
+    grid := parseInput(input)
+    sum := 0
+    for i, row := range grid {
+        for j, cell := range row {
+            if cell == '*' {
+                ratios, ok := findGearRatios(grid, i, j)
+                if ok {
+                    product := 1
+                    for _, ratio := range ratios {
+                        product *= ratio
+                    }
+                    sum += product
+                }
+            }
+        }
+    }
+    return d.Title() + ": " + strconv.Itoa(sum)
+}
+
+func findGearRatios(grid [][]rune, i, j int) ([]int, bool) {
+    var ratios []int
+    var processedPositions map[Position]bool = make(map[Position]bool) // To track processed numbers
+    directions := [...]struct{ x, y int }{{-1, 0}, {1, 0}, {0, -1}, {0, 1}, {-1, -1}, {-1, 1}, {1, -1}, {1, 1}}
+    for _, dir := range directions {
+        newX, newY := i+dir.x, j+dir.y
+        if newX >= 0 && newX < len(grid) && newY >= 0 && newY < len(grid[newX]) && isNumber(grid[newX][newY]) {
+            startY := findStartOfHorizontalNumber(grid[newX], newY)
+            pos := Position{Row: newX, Col: startY}
+            if !processedPositions[pos] {
+                num, _ := extractNumber(grid[newX], startY)
+                number, _ := strconv.Atoi(num)
+                ratios = append(ratios, number)
+                processedPositions[pos] = true
+            }
+        }
+    }
+    return ratios, len(ratios) == 2
+}
+
+func findStartOfHorizontalNumber(row []rune, endIndex int) int {
+    startIndex := endIndex
+    for startIndex > 0 && isNumber(row[startIndex-1]) {
+        startIndex--
+    }
+    return startIndex
 }
 
 func parseInput(input string) [][]rune {

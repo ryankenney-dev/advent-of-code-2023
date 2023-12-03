@@ -12,4 +12,7 @@ This was all done in a programming language (Go Lang) that I would still say I h
 * [Added Day 2 Part 2](docs/Added-Day-2-Part-2.md) (~5 minutes with ChatGPT 4)
 * [Updated CSS Styling](docs/Updated-CSS-Styling.md) (~5 minutes with ChatGPT 4)
 * [Added Day 3 Part 1](docs/Added-Day-3-Part-1.md) (~1 hour with ChatGPT 4)
-    * I had to aid in debugging the algorithm a bit
+    * I let it generate a full solution then I helped debug the issues (mostly feeding it debug outputs)
+* [Added Day 3 Part 2](docs/Added-Day-3-Part-2.md) (~1 hour with ChatGPT 4)
+    * Similar experience to part 1. I was surprised to see it repeat errors from part 1.
+
