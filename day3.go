@@ -10,11 +10,11 @@ type Day3Part1 struct{}
 type Day3Part2 struct{}
 
 func (d Day3Part1) Title() string {
-    return "Sum of Part Numbers"
+    return "(Day3Part1) Sum of Part Numbers"
 }
 
 func (d Day3Part2) Title() string {
-    return "Sum of Gear Ratios"
+    return "(Day3Part2) Sum of Gear Ratios"
 }
 
 type Position struct {

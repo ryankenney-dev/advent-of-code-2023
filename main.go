@@ -95,8 +95,6 @@ func homePage(w http.ResponseWriter, r *http.Request) {
 }
 
 var algorithms = map[string]Algorithm{
-    "lines": LinesAlgorithm{},
-    "characters": CharactersAlgorithm{},
     "day1part1": Day1Part1{},
     "day1part2": Day1Part2{},
     "day2part1": Day2Part1{},

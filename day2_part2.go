@@ -9,7 +9,7 @@ import (
 type Day2Part2 struct{}
 
 func (d Day2Part2) Title() string {
-    return "Sum of Power of Minimum Sets"
+    return "(Day2Part2) Sum of Power of Minimum Sets"
 }
 
 func (d Day2Part2) Compute(input string) string {

@@ -12,7 +12,7 @@ type Day1Part2 struct{}
 
 // Title returns the description of the Day1Part2 algorithm.
 func (d Day1Part2) Title() string {
-	return "Sum of Real Calibration Values"
+	return "(Day1Part2) Sum of Real Calibration Values"
 }
 
 // Compute executes the main algorithm of Day1Part2.

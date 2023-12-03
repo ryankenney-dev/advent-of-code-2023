@@ -9,7 +9,7 @@ import (
 type Day2Part1 struct{}
 
 func (d Day2Part1) Title() string {
-    return "Sum of IDs of Possible Games"
+    return "(Day2Part1) Sum of IDs of Possible Games"
 }
 
 func (d Day2Part1) Compute(input string) string {
