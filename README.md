@@ -11,5 +11,5 @@ This was all done in a programming language (Go Lang) that I would still say I h
 * [Added Day 2 Part 1](docs/Added-Day-2-Part-1.md) (~5 minutes with ChatGPT 4)
 * [Added Day 2 Part 2](docs/Added-Day-2-Part-2.md) (~5 minutes with ChatGPT 4)
 * [Updated CSS Styling](docs/Updated-CSS-Styling.md) (~5 minutes with ChatGPT 4)
-
-
+* [Added Day 3 Part 1](docs/Added-Day-3-Part-1.md) (~1 hour with ChatGPT 4)
+    * I had to aid in debugging the algorithm a bit

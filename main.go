@@ -101,6 +101,7 @@ var algorithms = map[string]Algorithm{
     "day1part2": Day1Part2{},
     "day2part1": Day2Part1{},
     "day2part2": Day2Part2{},
+    "day3part1": Day3Part1{},
 }
 
 func compute(w http.ResponseWriter, r *http.Request) {
