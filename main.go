@@ -4,6 +4,10 @@ import (
     "fmt"
     "html/template"
     "net/http"
+    "github.com/your_username/your_repo/day1"
+    "github.com/your_username/your_repo/day2_part1"
+    "github.com/your_username/your_repo/day2_part2"
+    "github.com/your_username/your_repo/day3"
 )
 
 func main() {
@@ -95,12 +99,12 @@ func homePage(w http.ResponseWriter, r *http.Request) {
 }
 
 var algorithms = map[string]Algorithm{
-    "day1part1": Day1Part1{},
-    "day1part2": Day1Part2{},
-    "day2part1": Day2Part1{},
-    "day2part2": Day2Part2{},
-    "day3part1": Day3Part1{},
-    "day3part2": Day3Part2{},
+    "day1part1": day1.Day1Part1{},
+    "day1part2": day1.Day1Part2{},
+    "day2part1": day2_part1.Day2Part1{},
+    "day2part2": day2_part2.Day2Part2{},
+    "day3part1": day3.Day3Part1{},
+    "day3part2": day3.Day3Part2{},
 }
 
 func compute(w http.ResponseWriter, r *http.Request) {

@@ -1,4 +1,4 @@
-package main
+package day2_part2
 
 import (
     "fmt"
@@ -16,7 +16,7 @@ func (d Day2Part2) Compute(input string) string {
     sum := 0
     games := strings.Split(input, "\n")
     for _, game := range games {
-        _, cubes := parseGame2(game)
+        _, cubes := parseGame(game)
         sum += powerOfSet(cubes)
     }
 
@@ -24,7 +24,7 @@ func (d Day2Part2) Compute(input string) string {
 }
 
 // Helper function to parse each game's data
-func parseGame2(game string) (int, map[string]int) {
+func parseGame(game string) (int, map[string]int) {
     parts := strings.Split(game, ": ")
     gameID, err := strconv.Atoi(strings.Split(parts[0], " ")[1])
     if err != nil {

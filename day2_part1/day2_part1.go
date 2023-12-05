@@ -1,4 +1,4 @@
-package main
+package day2_part1
 
 import (
     "fmt"
