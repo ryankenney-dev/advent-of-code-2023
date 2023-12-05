@@ -9,4 +9,4 @@ SCRIPT_DIR="$(dirname "$(readlink -f "$0")")"
 
 bash "${SCRIPT_DIR}/build.sh"
 
-bash "${SCRIPT_DIR}/run.sh"
+bash "${SCRIPT_DIR}/test.sh"

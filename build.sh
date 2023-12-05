@@ -7,6 +7,6 @@ SCRIPT_FILE="$(basename "$0")"
 # NOTE: readlink will not work in OSX
 SCRIPT_DIR="$(dirname "$(readlink -f "$0")")"
 
-bash "${SCRIPT_DIR}/build.sh"
+sudo docker build --target builder -t advent-of-code-2023-builder:local-build .
 
-bash "${SCRIPT_DIR}/run.sh"
+sudo docker build -t advent-of-code-2023:local-build .
