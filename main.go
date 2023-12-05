@@ -11,6 +11,7 @@ import (
     "github.com/ryankenney-dev/advent-of-code-2023/day3v2"
     "github.com/ryankenney-dev/advent-of-code-2023/day4_part1"
     "github.com/ryankenney-dev/advent-of-code-2023/day4_part2"
+    "github.com/ryankenney-dev/advent-of-code-2023/day5"
 )
 
 func main() {
@@ -111,6 +112,7 @@ var algorithms = map[string]Algorithm{
     "day3v2part1": day3v2.Day3V2Part1{},
     "day4part1": day4_part1.Day4Part1{},
     "day4part2": day4_part2.Day4Part2{},
+    "day5part1": day5.NewDay5Part1(),
 }
 
 func compute(w http.ResponseWriter, r *http.Request) {
