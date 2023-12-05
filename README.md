@@ -14,7 +14,7 @@ Build and launch webserver:
 
 ## Experience with ChatGPT
 
-This was all done in a programming language (Go Lang) that I would still say I have never used.
+This was all done in a programming language (GoLang) that I would still say I have never used. :)
 
 * [Initial Go Webserver Creation](docs/Initial-Go-Webserver-Creation.md)
   (~15 minutes with ChatGPT 4)
@@ -34,3 +34,9 @@ This was all done in a programming language (Go Lang) that I would still say I h
     * I described where to refactor for testability and ChatGPT generated biolerplate unit tests (with often bad sample data)
     * In the end I had bugs in the underlying pseduo code that only appeared in the large dataset,
       which made debugging difficult
+* [Added Day 4 Part 1](docs/Added-Day-4-Part-1.md) (~5 minutes with ChatGPT 4)
+    * I had it generate a complete solution from the original text
+* [Added Day 4 Part 2](docs/Added-Day-4-Part-2.md) (~30 minutes with ChatGPT 4)
+    * I had it generate a complete solution from the original text
+    * This had bugs, but I was able to get it to break down and unit test its own code until the bugs were ironed out
+    * I literally never read/understood the advent of code problem
