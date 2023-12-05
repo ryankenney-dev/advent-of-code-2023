@@ -4,10 +4,11 @@ import (
     "fmt"
     "html/template"
     "net/http"
-    "github.com/your_username/your_repo/day1"
-    "github.com/your_username/your_repo/day2_part1"
-    "github.com/your_username/your_repo/day2_part2"
-    "github.com/your_username/your_repo/day3"
+    "github.com/ryankenney-dev/advent-of-code-2023/day1"
+    "github.com/ryankenney-dev/advent-of-code-2023/day2_part1"
+    "github.com/ryankenney-dev/advent-of-code-2023/day2_part2"
+    "github.com/ryankenney-dev/advent-of-code-2023/day3"
+    "github.com/ryankenney-dev/advent-of-code-2023/day3v2"
 )
 
 func main() {
@@ -105,6 +106,7 @@ var algorithms = map[string]Algorithm{
     "day2part2": day2_part2.Day2Part2{},
     "day3part1": day3.Day3Part1{},
     "day3part2": day3.Day3Part2{},
+    "day3v2part1": day3v2.Day3V2Part1{},
 }
 
 func compute(w http.ResponseWriter, r *http.Request) {

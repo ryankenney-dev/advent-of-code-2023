@@ -5,8 +5,7 @@ FROM golang:1.18 as builder
 WORKDIR /app
 
 # Initialize Go module and download dependencies.
-# Replace 'github.com/your_username/your_repo' with your module path or use a generic name if not using version control.
-RUN go mod init github.com/your_username/your_repo
+RUN go mod init github.com/ryankenney-dev/advent-of-code-2023
 RUN go mod tidy
 
 # Copy the source from the current directory to the Working Directory inside the container.
