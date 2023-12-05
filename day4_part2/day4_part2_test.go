@@ -99,7 +99,7 @@ func TestCompute(t *testing.T) {
 					41 92 73 84 69 | 59 84 76 51 58  5 54 83
 					87 83 26 28 32 | 88 30 70 12 93 22 82 36
 					31 18 13 56 72 | 74 77 10 23 35 67 36 11`,
-			expected: "Total Number of Scratchcards: 30",
+			expected: "(Day4Part2) Total Number of Scratchcards: 30",
 		},
 	}
 
